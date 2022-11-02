@@ -1,3 +1,4 @@
+import Avatar from "../Avatar/Avatar";
 import "./Header.scss";
 
 function Header(props) {
@@ -7,12 +8,12 @@ function Header(props) {
         <img
           className="header__logo"
           alt="logo"
-          src={"../../src/asset/Logo/Brain-Flix-logo.svg"}
+          src={"../../src/assets/Logo/Brain-Flix-logo.svg"}
         />
         <div className="header__links header__links--right">
           <input className="search" placeholder="Search..." />
-          <div className="header__user"></div>
         </div>
+        <Avatar />
         <div className="header__upload"></div>
       </header>
     </div>
