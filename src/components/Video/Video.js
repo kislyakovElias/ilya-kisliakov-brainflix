@@ -7,6 +7,7 @@ function Video(props) {
         <video
           className="hero__video"
           alt="video"
+          controls
           // src={"../../src/asset/"}
         ></video>
 
