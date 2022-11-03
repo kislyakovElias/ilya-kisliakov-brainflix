@@ -1,0 +1,14 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  width: 20%;
+  height: 100%;
+  &__pic {
+    margin-left: 1rem;
+    // margin-top: 1rem;
+    // margin-right: 1rem;
+}

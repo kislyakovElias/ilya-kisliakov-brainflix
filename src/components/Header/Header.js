@@ -1,19 +1,22 @@
+import Avatar from "../Avatar/Avatar";
 import "./Header.scss";
+import logo from "../../assets/Logo/BrainFlix-logo.svg";
 
 function Header(props) {
   return (
     <div>
       <header className="header">
-        <img
-          className="header__logo"
-          alt="logo"
-          src={"../../src/asset/Logo/Brain-Flix-logo.svg"}
-        />
-        <div className="header__links header__links--right">
-          <input className="search" placeholder="Search..." />
-          <div className="header__user"></div>
+        <img className="header__logo" alt="logo" src={logo} />
+        <div className="header__search">
+          <input className="header__search__bar" placeholder="Search..." />
+          <Avatar className="header__search__avatar" />
         </div>
-        <div className="header__upload"></div>
+        <div className="header__upload">
+          <button className="header__upload__button">
+            <img className="header__upload__button-img" alt="upload" />
+            Upload
+          </button>
+        </div>
       </header>
     </div>
   );

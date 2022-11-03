@@ -1,0 +1,16 @@
+.avatar {
+  display: flex;
+  justify-content: flex-start;
+  width: 20%;
+  height: 100%;
+  &__pic {
+    margin-left: 1rem;
+    // margin-top: 1rem;
+    // margin-right: 1rem;
+    height: 2.2rem;
+    width: 2.2rem;
+    background: url("../../assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+    border-radius: 50%;
+  }
+}
