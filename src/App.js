@@ -10,13 +10,15 @@ import getVideoDetails from "./utilities/ulils";
 import VideoList from "./components/VideoList/VideoList";
 import { getVideos } from "./utilities/ulils";
 
+const apiKey = "dc0900dd-0f3b-4b59-a50b-938cbd326362";
+
 function App() {
   const [currentId, setCurrentId] = useState(videos[0].id);
   const [videoDetails, setVideoDetails] = useState(getVideoDetails(currentId));
   return (
     <div className="App">
       <Header />
-      <Video />
+      <Video video={videoDetails} apiKey={apiKey} />
       <Main video={videoDetails} />
       <VideoList videos={getVideos(currentId)} />
     </div>

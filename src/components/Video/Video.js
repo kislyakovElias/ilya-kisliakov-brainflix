@@ -1,6 +1,7 @@
 import "./Video.scss";
 
-function Video(props) {
+function Video({ video }) {
+  console.log(`${video.video}api_key=${video.apiKey}/${video.id}`);
   return (
     <div>
       <section className="hero">
@@ -8,7 +9,8 @@ function Video(props) {
           className="hero__video"
           alt="video"
           controls
-          // src={"../../src/asset/"}
+          src={`${video.video}?api_key=${video.apiKey}/${video.id}`}
+          poster={video.image}
         ></video>
 
         <div className="hero-controls"></div>
