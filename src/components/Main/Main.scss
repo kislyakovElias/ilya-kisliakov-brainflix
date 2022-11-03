@@ -4,11 +4,54 @@
 
 .main {
   display: flex;
-  justify-content: flex-start;
-  width: 20%;
+  flex-direction: column;
+  // justify-content: flex-start;
+  width: 100%;
   height: 100%;
-  &__pic {
-    margin-left: 1rem;
-    // margin-top: 1rem;
-    // margin-right: 1rem;
+  padding: 1rem;
+  &__header {
+    margin: 0;
+    color: $light-black;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: $mercury solid 1px;
+    border-bottom: solid $mercury 1px;
+    &__part {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 0.5rem 0;
+      margin: 0;
+      &__line {
+        margin: 0;
+        padding: 0rem;
+        font-size: 0.8rem;
+        color: $silver;
+        &-bold {
+          padding-left: 0;
+          font-weight: 700;
+          font-size: 0.8rem;
+          color: $light-black;
+        }
+      }
+    }
+  }
+  &__description {
+    // padding: 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  &__comments {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: $light-black;
+  }
 }
