@@ -17,6 +17,10 @@
     width: 100%;
     padding-bottom: 1rem;
     //background: url("./src/assets/Logo/BrainFlix-logo.svg");
+    &-pic {
+      height: 100%;
+      width: 100%;
+    }
   }
   &__search {
     height: 30%;
@@ -26,13 +30,27 @@
     width: 100%;
     margin-bottom: 1rem;
     &__bar {
+      border: solid 1px $mercury;
       width: 85%;
       height: 100%;
       border-radius: 0.25rem;
       background-color: $alabaster;
     }
     &__avatar {
-      width: 10%;
+      display: flex;
+      justify-content: flex-start;
+      width: 17%;
+      height: 100%;
+      &__pic {
+        margin-left: 0.7rem;
+        // margin-top: 1rem;
+        // margin-right: 1rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        background: url("../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
+      }
     }
   }
   &__upload {
@@ -42,7 +60,7 @@
       border: none;
       font-size: 0.75rem;
       font-weight: 700;
-      margin-bottom: 1rem 0;
+      // margin-bottom: 1rem 0;
       height: 100%;
       width: 100%;
       background-color: #0095ff;
@@ -51,6 +69,126 @@
       &-img {
         position: relative;
         left: -95px;
+      }
+    }
+    &__avatar {
+      display: none;
+      justify-content: flex-start;
+      width: 25%;
+      height: 100%;
+      &__pic {
+        margin-left: 0.7rem;
+        // margin-top: 1rem;
+        // margin-right: 1rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        background: url("../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@include medium {
+  .header {
+    height: 4.5rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    &__logo {
+      width: 30%;
+      padding: 0.5rem;
+      padding-left: 0.5rem;
+      height: 100%;
+
+      &-pic {
+        padding-left: 0.5rem;
+        width: 60%;
+      }
+    }
+    &__search {
+      padding-left: 1rem;
+      width: 35%;
+      height: 100%;
+      margin-bottom: 0;
+      &__bar {
+        width: 100%;
+      }
+      &__avatar {
+        display: none;
+      }
+    }
+    &__upload {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      width: 35%;
+      padding-left: 1.5rem;
+      &__avatar {
+        display: flex;
+        padding-left: 0.5rem;
+      }
+      &__button {
+        margin-bottom: 0;
+        width: 65%;
+        &-img {
+          left: -20px;
+        }
+      }
+    }
+  }
+}
+@include large {
+  .header {
+    padding-left: 0;
+    // 
+    height: 4.5rem;
+    // margin: 0 3rem;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    &__logo {
+      display: flex;
+      width: 50%;
+      padding: 0.5rem;
+      padding-left: 0rem;
+      height: 100%;
+
+      &-pic {
+        padding-left: 0rem;
+        width: 60%;
+      }
+    }
+    &__search {
+      padding-left: 0.5rem;
+      width: 20%;
+      height: 100%;
+      margin-bottom: 0;
+      &__bar {
+        width: 100%;
+      }
+      &__avatar {
+        display: none;
+      }
+    }
+    &__upload {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      width: 25%;
+      padding-left: 1.5rem;
+      &__avatar {
+        display: flex;
+        padding-left: 1.5rem;
+      }
+      &__button {
+        margin-bottom: 0;
+        width: 50%;
+        &-img {
+          left: -20px;
+        }
       }
     }
   }

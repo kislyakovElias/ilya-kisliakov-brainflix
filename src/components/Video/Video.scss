@@ -4,13 +4,21 @@
 
 .hero {
   width: 100vw;
-  height: 11rem;
-  background-color: rgb(61, 71, 68);
+  background-color: $silver;
   display: flex;
   justify-content: center;
-  max-height: 30rem;
-  __video {
+  object-fit: contain;
+  min-width: 20rem;
+  &__video {
     width: 100%;
-    height: content;
+    // object-fit: contain;
+    // aspect-ratio: 16/9;
+    aspect-ratio: 16/9;
+  }
+}
+
+@include medium {
+  .hero {
+    min-height: 24.5rem;
   }
 }

@@ -1,20 +1,19 @@
 import "./SubmitForm.scss";
-import Avatar from "../Avatar/Avatar";
 
 function SubmitForm() {
   return (
     <>
-      <form class="comments__form" id="comments__form">
-        <div class="comments__form__imagebox">
-          <div class="comments__form__imagebox-pic"></div>
+      <form className="comments__form" id="comments__form">
+        <div className="comments__form__imagebox">
+          <div className="comments__form__imagebox-pic"></div>
         </div>
-        {/* <Avatar /> */}
-        <div class="comments__form__box">
-          <div class="comments__form__box__unit">
-            <label class="comments__form__box__unit-label" for="comment">
+        <div className="comments__form__box">
+          <div className="comments__form__box__unit">
+            <label className="comments__form__box__unit-label" for="comment">
               JOIN THE CONVERSATION
             </label>
             <textarea
+              className="comments__form__box__unit__text"
               id="text"
               type="text"
               name="comment"
@@ -22,8 +21,8 @@ function SubmitForm() {
               required
             ></textarea>
           </div>
-          <div>
-            <button type="submit" class="comments__form__box__submit">
+          <div className="comments__form__box__submit">
+            <button type="submit" className="comments__form__box__submit-btn">
               COMMENT
             </button>
           </div>
