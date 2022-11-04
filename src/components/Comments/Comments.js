@@ -7,9 +7,8 @@ function Comments({ commentsArr }) {
     <>
       <div className="comments">
         <SubmitForm />
-        {/*  */}
         {commentsArr.map((comment, key) => (
-          <div className="comments__container">
+          <div key={key} className="comments__container">
             <div className="comments__container__box">
               <div className="comments__container__box__imagebox">
                 <div className="comments__container__box__imagebox-pic"></div>
@@ -31,7 +30,6 @@ function Comments({ commentsArr }) {
             </div>
           </div>
         ))}
-        {/*  */}
       </div>
     </>
   );
