@@ -4,20 +4,24 @@ function VideoList({ videos }) {
   // const { title, channel, image } = videos;
   return (
     <>
-      <div class="videoList">
-        <h6 class="videoList__header">NEXT VIDEOS</h6>
+      <div className="videoList">
+        <h6 className="videoList__header">NEXT VIDEOS</h6>
         {videos.map((video, key) => (
-          <div class="videoList__content">
+          <div key={key} class="videoList__content">
             <div class="videoList__content__picture">
               <img
-                class="videoList__content__picture-img"
+                className="videoList__content__picture-img"
                 src={video.image}
                 alt="video"
               />
             </div>
-            <div class="videoList__content__info">
-              <div class="videoList__content__info__title">{video.title}</div>
-              <p class="videoList__content__info__channel">{video.channel}</p>
+            <div className="videoList__content__info">
+              <div className="videoList__content__info__title">
+                {video.title}
+              </div>
+              <p className="videoList__content__info__channel">
+                {video.channel}
+              </p>
             </div>
           </div>
         ))}

@@ -55,3 +55,43 @@
     color: $light-black;
   }
 }
+
+@include medium {
+  .main {
+    padding: 2rem;
+    padding-bottom: 0;
+    &__header {
+      font-size: 2rem;
+      line-height: 1.2;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &__stats {
+      width: 100%;
+      justify-content: space-between;
+      border-top: none;
+      &__part {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        &__line {
+          padding-right: 2rem;
+          &-bold {
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+    &__description {
+      padding: 1rem 0;
+      font-size: 0.91rem;
+    }
+    &__comments {
+      font-size: 0.9rem;
+      color: $light-black;
+    }
+  }
+}
