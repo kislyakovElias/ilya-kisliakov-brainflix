@@ -9,7 +9,10 @@ function SubmitForm() {
         </div>
         <div className="comments__form__box">
           <div className="comments__form__box__unit">
-            <label className="comments__form__box__unit-label" for="comment">
+            <label
+              className="comments__form__box__unit-label"
+              htmlFor="comment"
+            >
               JOIN THE CONVERSATION
             </label>
             <textarea
