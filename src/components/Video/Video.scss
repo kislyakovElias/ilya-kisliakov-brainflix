@@ -25,3 +25,12 @@
     min-height: 24.5rem;
   }
 }
+
+@include large {
+  .hero {
+    min-height: 24.5rem;
+      &__video {
+    width: 66vw;
+      }
+  }
+}

@@ -122,3 +122,28 @@
     }
   }
 }
+
+@include large {
+  .comments {
+    &__form {
+      border-bottom: 0;
+          &__imagebox {
+
+      width: 13.5%;
+      &-pic {
+        margin-left: 0.4rem;
+      
+      }
+          }
+       &__box {
+        &__unit {
+        padding-right: 1rem;
+        }
+         &__submit {
+          padding-right: 1.5rem;
+          width: 28.5%;
+         }
+       }
+    }
+  }
+}

@@ -81,3 +81,15 @@
     }
   }
 }
+
+@include large {
+  .videoList {
+    border-left: 1px solid $mercury;
+    padding-left: 1.4rem;
+    &__header {
+    }
+    &__content {
+      width: 77%;
+    }
+  }
+}
