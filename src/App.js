@@ -29,8 +29,14 @@ function App() {
     <div className="App">
       <Header />
       <Video video={videoDetails} apiKey={apiKey} />
-      <Main video={videoDetails} />
-      <VideoList videoList={videos} onClick={clickHandler} />
+      <div className="bottomSection">
+        <div className="bottomSection__main">
+          <Main video={videoDetails} />
+        </div>
+        <div className="bottomSection__videos">
+          <VideoList videoList={videos} onClick={clickHandler} />
+        </div>
+      </div>
     </div>
   );
 }

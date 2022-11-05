@@ -101,3 +101,23 @@
     }
   }
 }
+
+@include large {
+  .comments {
+    &__container {
+      &__box {
+        border-bottom: 0;
+        border-top: 1px solid $mercury;
+        &__content {
+          padding-right: 1.6rem;
+        }
+        &__imagebox {
+           width: 13.5%;
+          &-pic {
+            margin-left: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -95,3 +95,21 @@
     }
   }
 }
+
+@include large {
+  .main {
+    padding-right: 0;
+    &__header {
+    }
+    &__stats {
+      &__part {
+        &__line {
+          // padding-right: 1.75rem;
+        }
+      }
+    }
+    &__description {
+      padding-right: 1.5rem;
+    }
+  }
+}
