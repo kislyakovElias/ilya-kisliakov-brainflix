@@ -66,8 +66,12 @@
           font-size: 0.75rem;
           line-height: normal;
           font-weight: 700;
+
+          &:hover {
+            background-color: $dark-blue;
+          }
         }
-        &-icon{
+        &-icon {
           position: relative;
           left: -65px;
           transform: scale(0.75, 0.75);
@@ -112,8 +116,9 @@
           width: 25%;
           &-btn {
             height: 2.5rem;
+            max-width: 12rem;
           }
-          &-icon{
+          &-icon {
             left: -33px;
           }
         }
@@ -132,26 +137,24 @@
   .comments {
     &__form {
       border-bottom: 0;
-          &__imagebox {
-
-      width: 13.5%;
-      &-pic {
-        margin-left: 0.4rem;
-      
-      }
-          }
-       &__box {
-        &__unit {
-        padding-right: 1rem;
+      &__imagebox {
+        width: 13.5%;
+        &-pic {
+          margin-left: 0.4rem;
         }
-         &__submit {
+      }
+      &__box {
+        &__unit {
+          padding-right: 1rem;
+        }
+        &__submit {
           padding-right: 1.5rem;
           width: 28.5%;
-          &-icon{
+          &-icon {
             left: -25px;
           }
-         }
-       }
+        }
+      }
     }
   }
 }
