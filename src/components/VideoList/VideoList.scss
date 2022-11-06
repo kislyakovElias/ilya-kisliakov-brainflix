@@ -15,12 +15,9 @@
     padding-bottom: 0.5rem;
     color: $silver;
     font-weight: 700;
-    // scale: ();
     font-size: 0.8rem;
   }
   &__content {
-    // margin-top: 1rem;
-    // margin-right: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -30,7 +27,6 @@
       padding: 0.25rem;
       padding-left: 0;
       height: 30%;
-      // background-size: cover;
       &-img {
         object-fit: cover;
         border-radius: 0.25rem;
@@ -48,7 +44,6 @@
         font-size: 0.8rem;
         font-weight: 700;
         color: $light-black;
-        //make the text collapse to ... if not fit 2 lines
       }
       &__channel {
         font-size: 0.8rem;

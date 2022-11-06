@@ -17,6 +17,7 @@ function App() {
   const [videos, setVideos] = useState(getVideos(currentId));
   const [videoDetails, setVideoDetails] = useState(getVideoDetails(currentId));
 
+  
   const clickHandler = (event, clickedId) => {
     console.log(event, clickedId);
     event.preventDefault();

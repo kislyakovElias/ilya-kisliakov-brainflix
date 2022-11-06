@@ -5,7 +5,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -22,7 +21,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items:inherit;
+    align-items: inherit;
     border-top: $mercury solid 1px;
     border-bottom: solid $mercury 1px;
     &__part {
@@ -31,24 +30,20 @@
       flex-direction: column;
       justify-content: flex-start;
       padding: 0.5rem 0;
-      // padding-bottom: 1rem;
       margin: 0;
-      &-block{
+      &-block {
         display: flex;
-        // flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding: 0;
         margin: 0;
-        // height:31px;
-        &-img{
+        &-img {
           max-height: 1rem;
           padding-right: 0.5rem;
         }
       }
       &__line {
         margin: 0;
-        // padding: 0.5rem 0rem;
         font-size: 0.8rem;
         color: $silver;
         padding: 0.5rem;
@@ -66,7 +61,6 @@
     }
   }
   &__description {
-    // padding: 1rem 0;
     font-size: 0.8rem;
     line-height: 1.5;
   }
@@ -102,8 +96,6 @@
         width: fit-content;
         &__line {
           width: auto;
-          // padding-right: 2rem;
-          // padding-bottom: 0.5rem;
           &-bold {
             padding-right: 2rem;
           }
@@ -129,7 +121,6 @@
     &__stats {
       &__part {
         &__line {
-          // padding-right: 1.75rem;
         }
       }
     }

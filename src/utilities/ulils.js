@@ -17,7 +17,6 @@ export const timestampConvert = (stamp) => {
 
 export const getVideos = (videoId) => {
   return videos.filter((element) => element.id !== videoId);
-  // .slice(randomTen, randomTen + 10);
 };
 
 export default getVideoDetails;

@@ -4,13 +4,8 @@ import { timestampConvert } from "../../utilities/ulils";
 import likeIcon from "../../assets/Icons/likes.svg";
 import viewsIcon from "../../assets/Icons/views.svg";
 
-// import videos from "../../data/video-details.json";
-// import { useState, react } from "react";
-// import getVideoDetails from "../../utilities/ulils";
-
 function Main({ video }) {
-  // const [currentId, setCurrentId] = useState(videos[0].id);
-  // const [videoDetails, setVideoDetails] = useState(getVideoDetails(currentId));
+
 
   const { title, channel, description, views, likes, timestamp, comments } =
     video;

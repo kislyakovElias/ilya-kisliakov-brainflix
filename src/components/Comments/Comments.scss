@@ -3,16 +3,11 @@
 @use "../../styles/partials/colors" as *;
 
 .comments {
-  //   padding: 1rem;
+
   display: flex;
   flex-direction: column;
   justify-content: left;
 
-  //   &__header {
-  //     color: $light-black;
-  //     font-size: 1.5rem;
-  //     font-weight: 600;
-  //   }
   &__container {
     &__box {
       border-bottom: 1px solid $mercury;
@@ -60,8 +55,6 @@
           font-size: 0.75rem;
           line-height: 1.1rem;
           padding-bottom: 0.9rem;
-          line-break: anywhere;
-          //no word break
         }
       }
     }
@@ -87,14 +80,12 @@
           &-top {
             &-header {
               font-size: 0.85rem;
-              // margin: 0;
             }
           }
           &-text {
             font-size: 0.85rem;
             line-height: 1.25rem;
             padding-bottom: 0;
-            // margin-bottom: 1.5rem;
           }
         }
       }
@@ -112,7 +103,7 @@
           padding-right: 1.6rem;
         }
         &__imagebox {
-           width: 13.5%;
+          width: 13.5%;
           &-pic {
             margin-left: 0.4rem;
           }
