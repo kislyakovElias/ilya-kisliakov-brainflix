@@ -1,6 +1,8 @@
 
 import "./Header.scss";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
+import upload from "../../assets/Icons/upload.svg";
+
 
 function Header(props) {
   return (
@@ -18,7 +20,7 @@ function Header(props) {
         </div>
         <div className="header__upload">
           <button className="header__upload__button">
-            <img className="header__upload__button-img" alt="upload" />
+            <img className="header__upload__button-img" alt="upload" src={upload}  />
             UPLOAD
           </button>
           <div className="header__upload__avatar">

@@ -1,6 +1,9 @@
 import "./Main.scss";
 import Comments from "../Comments/Comments";
 import { timestampConvert } from "../../utilities/ulils";
+import likeIcon from "../../assets/Icons/likes.svg";
+import viewsIcon from "../../assets/Icons/views.svg";
+
 // import videos from "../../data/video-details.json";
 // import { useState, react } from "react";
 // import getVideoDetails from "../../utilities/ulils";
@@ -24,8 +27,14 @@ function Main({ video }) {
             </p>
           </div>
           <div className="main__stats__part">
+            <div className="main__stats__part-block">
+            <img className="main__stats__part-block-img" src={viewsIcon} alt="views"/>
             <p className="main__stats__part__line">{views}</p>
+            </div>
+            <div className="main__stats__part-block">
+            <img className="main__stats__part-block-img" src={likeIcon} alt="likes"/>
             <p className="main__stats__part__line">{likes}</p>
+            </div>
           </div>
         </div>
         <p className="main__description">{description}</p>

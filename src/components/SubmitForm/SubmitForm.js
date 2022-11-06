@@ -1,4 +1,6 @@
 import "./SubmitForm.scss";
+import commentIcon from "../../assets/Icons/add_comment.svg";
+
 
 function SubmitForm() {
   return (
@@ -26,6 +28,7 @@ function SubmitForm() {
           </div>
           <div className="comments__form__box__submit">
             <button type="submit" className="comments__form__box__submit-btn">
+            <img className="comments__form__box__submit-icon" alt="comment" src={commentIcon}/>
               COMMENT
             </button>
           </div>

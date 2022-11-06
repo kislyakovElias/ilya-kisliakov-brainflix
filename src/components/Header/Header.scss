@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  padding-top: 0.75rem;
   &__logo {
     height: 30%;
     width: 100%;
@@ -22,6 +23,7 @@
       width: 100%;
     }
   }
+
   &__search {
     height: 30%;
     display: flex;
@@ -30,11 +32,13 @@
     width: 100%;
     margin-bottom: 1rem;
     &__bar {
+      padding-left: 35px;
       border: solid 1px $mercury;
       width: 85%;
       height: 100%;
       border-radius: 0.25rem;
       background-color: $alabaster;
+      background: no-repeat url("../../assets/Icons/search.svg") .4375rem;
     }
     &__avatar {
       display: flex;
@@ -57,6 +61,9 @@
     height: 50%;
     width: 100%;
     &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border: none;
       font-size: 0.75rem;
       font-weight: 700;
@@ -68,7 +75,8 @@
       color: aliceblue;
       &-img {
         position: relative;
-        left: -95px;
+        left: -100px;
+        transform: scale(0.8, 0.8);
       }
     }
     &__avatar {
@@ -134,7 +142,7 @@
         margin-bottom: 0;
         width: 65%;
         &-img {
-          left: -20px;
+          left: -35px;
         }
       }
     }
@@ -187,7 +195,7 @@
         margin-bottom: 0;
         width: 50%;
         &-img {
-          left: -20px;
+          left: -30px;
         }
       }
     }

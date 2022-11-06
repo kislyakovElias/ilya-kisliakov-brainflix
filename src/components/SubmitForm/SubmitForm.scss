@@ -67,6 +67,11 @@
           line-height: normal;
           font-weight: 700;
         }
+        &-icon{
+          position: relative;
+          left: -65px;
+          transform: scale(0.75, 0.75);
+        }
       }
     }
   }
@@ -106,10 +111,12 @@
 
         &__submit {
           padding-top: 1.4rem;
-          width: 26%;
+          width: 25%;
           &-btn {
             height: 2.5rem;
-            //
+          }
+          &-icon{
+            left: -33px;
           }
         }
       }
@@ -142,6 +149,9 @@
          &__submit {
           padding-right: 1.5rem;
           width: 28.5%;
+          &-icon{
+            left: -25px;
+          }
          }
        }
     }
