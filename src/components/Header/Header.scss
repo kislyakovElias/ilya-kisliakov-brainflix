@@ -1,0 +1,203 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.header {
+  width: 100%;
+  height: 10rem;
+  background-color: $hero-text;
+  color: $main-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 0.75rem;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    padding-bottom: 1rem;
+    &-pic {
+      height: 100%;
+      width: 100%;
+      max-height: 1.5625rem;
+      max-width: 7.5rem;
+    }
+  }
+
+  &__search {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    &__bar {
+      padding-left: 35px;
+      border: solid 1px $mercury;
+      width: 85%;
+      height: 100%;
+      border-radius: 0.25rem;
+      background-color: $alabaster;
+      background: no-repeat url("../../assets/Icons/search.svg") 0.4375rem;
+    }
+    &__avatar {
+      display: flex;
+      justify-content: flex-start;
+      width: 17%;
+      height: 100%;
+      &__pic {
+        margin-left: 0.7rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        background: url("../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__upload {
+    height: 50%;
+    width: 100%;
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      height: 100%;
+      width: 100%;
+      background-color: #0095ff;
+      border-radius: 0.35rem;
+      color: aliceblue;
+      &:hover {
+        background-color: $dark-blue;
+      }
+      &-img {
+        position: relative;
+        left: -100px;
+        transform: scale(0.8, 0.8);
+      }
+    }
+    &__avatar {
+      display: none;
+      justify-content: flex-start;
+      width: 25%;
+      height: 100%;
+      &__pic {
+        margin-left: 0.7rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        background: url("../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@include medium {
+  .header {
+    height: 4.5rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    &__logo {
+      width: 30%;
+      padding: 0.5rem;
+      padding-left: 0.5rem;
+      height: 100%;
+      justify-content: flex-start;
+      &-pic {
+        padding-left: 0.5rem;
+        width: 60%;
+      }
+    }
+    &__search {
+      padding-left: 1rem;
+      width: 35%;
+      height: 100%;
+      margin-bottom: 0;
+      &__bar {
+        width: 100%;
+      }
+      &__avatar {
+        display: none;
+      }
+    }
+    &__upload {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      width: 35%;
+      padding-left: 1.5rem;
+      &__avatar {
+        display: flex;
+        padding-left: 0.5rem;
+      }
+      &__button {
+        margin-bottom: 0;
+        width: 65%;
+        max-height: 2.55rem;
+        max-width: 12rem;
+        &-img {
+          left: -35px;
+        }
+      }
+    }
+  }
+}
+@include large {
+  .header {
+    padding-left: 0;
+    //
+    height: 4.5rem;
+    justify-content: flex-start;
+    &__logo {
+      display: flex;
+      width: 51%;
+      padding: 0.53rem;
+      padding-left: 8rem;
+      height: 100%;
+
+      &-pic {
+        padding-left: 0rem;
+        width: 60%;
+      }
+    }
+    &__search {
+      padding-left: 0.5rem;
+      width: 20%;
+      height: 100%;
+      margin-bottom: 0;
+      &__bar {
+        width: 100%;
+      }
+      &__avatar {
+        display: none;
+      }
+    }
+    &__upload {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      width: 25%;
+      padding-left: 1.5rem;
+      &__avatar {
+        display: flex;
+        padding-left: 1.5rem;
+      }
+      &__button {
+        margin-bottom: 0;
+        width: 50%;
+        &-img {
+          left: -30px;
+        }
+      }
+    }
+  }
+}
