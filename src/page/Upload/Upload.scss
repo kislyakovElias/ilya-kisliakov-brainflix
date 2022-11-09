@@ -1,0 +1,51 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.upload {
+  // width: 40vw;
+  // height: 40vh;
+  // background-color: $silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  object-fit: contain;
+  padding: 1rem;
+  // min-width: 20rem;
+  // background-color: black;
+  border-top: solid $mercury 2px;
+  &__header {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $light-black;
+  }
+  &__videobox {
+    color: $silver;
+    // padding: 0;
+    // margin: 0;
+    &__video {
+      height: 10rem;
+      width: 20rem;
+      // width: 92%;
+      // max-height: 15rem;
+      aspect-ratio: 16/9;
+    }
+  }
+  &__form {
+  }
+}
+
+@include medium {
+  .upload {
+    // min-height: 24.5rem;
+  }
+}
+
+@include large {
+  .upload {
+    // min-height: 24.5rem;
+    &__video {
+      width: 66vw;
+    }
+  }
+}

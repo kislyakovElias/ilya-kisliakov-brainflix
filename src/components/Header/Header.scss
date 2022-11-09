@@ -19,6 +19,7 @@
     height: 30%;
     width: 100%;
     padding-bottom: 1rem;
+    text-decoration: none;
     &-pic {
       height: 100%;
       width: 100%;
@@ -73,6 +74,7 @@
       background-color: #0095ff;
       border-radius: 0.35rem;
       color: aliceblue;
+      text-decoration: none;
       &:hover {
         background-color: $dark-blue;
       }
