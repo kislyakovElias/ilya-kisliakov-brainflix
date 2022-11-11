@@ -6,7 +6,7 @@ import axios from "axios";
 function VideoList(props) {
   let params = useParams();
 
-  console.log(params.videoId, "prms"); //// remove
+  // console.log(params.videoId, "prms"); //// remove
 
   useEffect(() => {
     if (params.videoId) {
@@ -29,9 +29,9 @@ function VideoList(props) {
     <>
       <div className="videoList">
         <h6 className="videoList__header">NEXT VIDEOS</h6>
-        {props.videoList.map((video, key) => (
-          <Link className="videoList__content-link" to={`/${video.id}`}>
-            <div key={key} className="videoList__content">
+        {props.videoList.map((video) => (
+          <Link className="videoList__content-link" key={video.id} to={`/${video.id}`}>
+            <div className="videoList__content">
               <div className="videoList__content__picture">
                 {
                   <img

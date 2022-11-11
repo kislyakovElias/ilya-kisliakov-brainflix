@@ -1,9 +1,27 @@
-import videoDetails from "../data/video-details.json";
-import videos from "../data/videos.json";
+// import videoDetails from "../data/video-details.json";
+// import videos from "../data/videos.json";
+// import { useEffect } from "react";
 
-const getVideoDetails = (videoId) => {
-  return videoDetails.find((video) => video.id === videoId);
-};
+
+  // useEffect(() => {
+    
+  //   const fetchVideoDetails = async () => {
+  //     try {
+  //       axios.get(`${url}/${currentId}?api_key=${apiKey}`).then((response) => {
+  //         const data = response.data;
+  //         setVideoDetails(data);
+  //       });
+  //     } catch (error) {
+  //       console.log("Error", error);
+  //     }
+  //   };
+  //   fetchVideoDetails();
+
+  // }, []);
+
+// const getVideoDetails = (videoId) => {
+//   return videoDetails.find((video) => video.id === videoId);
+// };
 
 export const timestampConvert = (stamp) => {
   const options = {
@@ -15,8 +33,8 @@ export const timestampConvert = (stamp) => {
   return s;
 };
 
-export const getVideos = (videoId) => {
-  return videos.filter((element) => element.id !== videoId);
-};
+ export const filterVideo = (videos, videoId) => {
+   return videos.filter((element) => element.id !== videoId);
+ };
 
-export default getVideoDetails;
+// export default getVideoDetails;
