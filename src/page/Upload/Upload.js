@@ -1,14 +1,15 @@
 import "./Upload.scss";
 import Header from "../../components/Header/Header";
 import uploadIcon from "../../assets/Icons/publish.svg";
+import { Link } from "react-router-dom";
 
 function Upload() {
   return (
     <div>
       <div>
-      <Header />
+        <Header />
       </div>
-        <div className="upload__header">Upload Video</div>
+      <div className="upload__header">Upload Video</div>
       <section className="upload">
         <div className="upload__videobox">
           <p className="upload__videobox__text">VIDEO THUMBNAIL</p>
@@ -52,19 +53,21 @@ function Upload() {
           </div>
         </form>
       </section>
-            <div className="upload__form__box__submit">
-              <button type="submit" className="upload__form__box__submit-btn">
-                <img
-                  className="upload__form__box__submit-icon"
-                  alt="comment"
-                  src={uploadIcon}
-                />
-                PUBLISH
-              </button>
-            <div className="upload__cancel">
-              <button className="upload__cancel__button">CANCEL</button>
-            </div>
-            </div>
+      <div className="upload__form__box__submit">
+        <button type="submit" className="upload__form__box__submit-btn">
+          <img
+            className="upload__form__box__submit-icon"
+            alt="comment"
+            src={uploadIcon}
+          />
+          PUBLISH
+        </button>
+        <div className="upload__cancel">
+          <Link className="upload__cancel" to="/">
+            <button className="upload__cancel__button">CANCEL</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
