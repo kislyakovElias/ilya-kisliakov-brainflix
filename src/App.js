@@ -84,13 +84,13 @@ function App() {
     <div className="App">
       <Header />
       
-      {videoDetails.video? <Video video={videoDetails} apiKey={apiKey} /> : "Loading"}
+      {videoDetails.video? <Video video={videoDetails} apiKey={apiKey} /> : "Loading.."}
       <div className="bottomSection">
         <div className="bottomSection__main">
           {videoDetails.comments[0].id && <Main video={videoDetails} />}
         </div>
         <div className="bottomSection__videos">
-          <VideoList videoList={videos} setId={setCurrentId} />
+        {videos &&<VideoList videoList={videos} setId={setCurrentId} />}
         </div>
       </div>
     </div>

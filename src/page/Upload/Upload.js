@@ -54,6 +54,7 @@ function Upload() {
         </form>
       </section>
       <div className="upload__form__box__submit">
+      <Link className="upload__form__box__submit-btn" to="/success">
         <button type="submit" className="upload__form__box__submit-btn">
           <img
             className="upload__form__box__submit-icon"
@@ -62,6 +63,7 @@ function Upload() {
           />
           PUBLISH
         </button>
+        </Link>
         <div className="upload__cancel">
           <Link className="upload__cancel" to="/">
             <button className="upload__cancel__button">CANCEL</button>

@@ -123,6 +123,8 @@
           line-height: normal;
           font-weight: 700;
           max-width: 24rem;
+          text-decoration: none;
+          // color: inherit;
 
           &:hover {
             background-color: $dark-blue;

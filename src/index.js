@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Upload from "./page/Upload/Upload";
+import Success from "./page/Success/Success"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +13,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path=":videoId" element={<App />} />
         <Route path="/upload" element={<Upload />} />
+        <Route path="/success" element={<Success />} />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
