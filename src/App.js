@@ -6,7 +6,6 @@ import Main from "./components/Main/Main";
 import { useState, useEffect } from "react";
 import axios from "axios";
 //
-// import getVideoDetails from "./utilities/ulils";
 import VideoList from "./components/VideoList/VideoList";
 import { filterVideo } from "./utilities/ulils";
 
@@ -37,21 +36,17 @@ const defaultDetails = {
   ],
 };
 
-// export const videosData = () => {
-// };
 
 function App() {
   const [currentId, setCurrentId] = useState(defaultVideoId);
   const [videos, setVideos] = useState([]);
   const [videoDetails, setVideoDetails] = useState(defaultDetails);
-  // console.log(videoDetails, "getVidDet");
 
   useEffect(() => {
     axios
       .get(`${url}?api_key=${apiKey}`)
       .then((response) => {
         const data = response.data;
-        console.log(data, "data");
         setVideos(filterVideo(data, currentId));
       })
       .catch((error) => error);
@@ -62,7 +57,6 @@ function App() {
       try {
         axios.get(`${url}/${currentId}?api_key=${apiKey}`).then((response) => {
           const data = response.data;
-          // console.log(data, "data");
           setVideoDetails(data);
         });
       } catch (error) {
@@ -70,15 +64,9 @@ function App() {
       }
     };
     fetchVideoDetails();
-    // console.log(videosData(), "111");
-    // setCurrentId(currentId);
-    // setVideos(filter(videos, currentId));
+
   }, [currentId]);
 
-  // const clickHandler = (event, clickedId) => {
-  //   console.log(event, clickedId);
-  //   event.preventDefault();
-  // };
 
   return (
     <div className="App">

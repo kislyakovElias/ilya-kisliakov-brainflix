@@ -36,13 +36,16 @@
     width: 100%;
     margin-bottom: 1rem;
     &__bar {
-      padding-left: 35px;
+      opacity: 1;
+      font-family: Avenir;
+      color: $dark-black;
+      padding-left: 38px;
       border: solid 1px $mercury;
       width: 85%;
       height: 100%;
       border-radius: 0.25rem;
       background-color: $alabaster;
-      background: no-repeat url("../../assets/Icons/search.svg") 0.4375rem;
+      background: no-repeat url("../../assets/Icons/search.svg") 0.7375rem;
     }
     &__avatar {
       display: flex;
@@ -73,7 +76,7 @@
       width: 100%;
       background-color: #0095ff;
       border-radius: 0.35rem;
-      color: aliceblue;
+      color: $hero-text;
       text-decoration: none;
       &:hover {
         background-color: $dark-blue;
@@ -106,6 +109,7 @@
     height: 4.5rem;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     &__logo {
       width: 30%;
       padding: 0.5rem;
@@ -120,7 +124,7 @@
     &__search {
       padding-left: 1rem;
       width: 35%;
-      height: 100%;
+      height: 90%;
       margin-bottom: 0;
       &__bar {
         width: 100%;
@@ -138,6 +142,7 @@
       padding-left: 1.5rem;
       &__avatar {
         display: flex;
+        align-items: center;
         padding-left: 0.5rem;
       }
       &__button {
@@ -173,7 +178,6 @@
     &__search {
       padding-left: 0.5rem;
       width: 20%;
-      height: 100%;
       margin-bottom: 0;
       &__bar {
         width: 100%;

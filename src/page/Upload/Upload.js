@@ -16,8 +16,6 @@ function Upload() {
           <div className="upload__videobox__video">
             <div className="upload__videobox__video-img"></div>
           </div>
-
-          {/* <img src="../assets/images/Upload-video-preview.jpg" alt="vimage" /> */}
         </div>
         <form className="upload__form">
           <div className="upload__form__box">

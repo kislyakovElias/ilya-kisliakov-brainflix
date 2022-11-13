@@ -6,8 +6,6 @@ import axios from "axios";
 function VideoList(props) {
   let params = useParams();
 
-  // console.log(params.videoId, "prms"); //// remove
-
   useEffect(() => {
     if (params.videoId) {
       axios
@@ -22,8 +20,6 @@ function VideoList(props) {
       props.setId("84e96018-4022-434e-80bf-000ce4cd12b8");
     }
   }, [params]);
-
-  // Create and call component for that maybe
 
   return (
     <>
