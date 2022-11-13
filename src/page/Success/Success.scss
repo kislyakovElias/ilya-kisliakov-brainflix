@@ -1,0 +1,60 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.sucess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  padding: 1rem;
+  padding-top: 0;
+  &__header {
+    padding: 0rem 1rem;
+    padding-top: 1.5rem;
+    border-top: solid $mercury 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $light-black;
+  }
+  &__body {
+    padding: 2rem;
+  }
+  &__footer {
+    padding: 2rem;
+  }
+}
+
+@include medium {
+  .sucess {
+    margin: 2.25rem;
+    margin-top: 1.5rem;
+    border-top: solid $mercury 2px;
+    padding: 0;
+    &__header {
+      padding-left: 3rem;
+      padding-top: 2.5rem;
+      font-size: 2rem;
+      border-top: solid 2px $mercury;
+    }
+  }
+}
+
+@include large {
+  .sucess {
+    display: flex;
+    flex-direction: row;
+    margin: 0 7.75rem;
+    &__header {
+      padding-left: 7.5rem;
+      margin-bottom: 1.5rem;
+    }
+    &__body {
+      padding-left: 7.5rem;
+    }
+    &__footer {
+      padding-left: 7.5rem;
+    }
+  }
+}

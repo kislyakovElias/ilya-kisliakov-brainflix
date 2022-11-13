@@ -3,39 +3,82 @@ import Header from "./components/Header/Header";
 import Video from "./components/Video/Video";
 import Main from "./components/Main/Main";
 //
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 //
-import videoArr from "./data/video-details.json";
-import getVideoDetails from "./utilities/ulils";
 import VideoList from "./components/VideoList/VideoList";
-import { getVideos } from "./utilities/ulils";
+import { filterVideo } from "./utilities/ulils";
 
+const url = "https://project-2-api.herokuapp.com/videos";
 const apiKey = "dc0900dd-0f3b-4b59-a50b-938cbd326362";
 
-function App() {
-  const [currentId, setCurrentId] = useState(videoArr[0].id);
-  const [videos, setVideos] = useState(getVideos(currentId));
-  const [videoDetails, setVideoDetails] = useState(getVideoDetails(currentId));
+const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
 
-  
-  const clickHandler = (event, clickedId) => {
-    console.log(event, clickedId);
-    event.preventDefault();
-    setCurrentId(clickedId);
-    setVideos(getVideos(clickedId));
-    setVideoDetails(getVideoDetails(clickedId));
-  };
+const defaultDetails = {
+  id: "",
+  title: "",
+  channel: "",
+  image: "",
+  description: "",
+  views: "",
+  likes: "",
+  duration: "",
+  video: "",
+  timestamp: 0,
+  comments: [
+    {
+      id: "",
+      name: "",
+      comment: "",
+      likes: 0,
+      timestamp: 0,
+    },
+  ],
+};
+
+
+function App() {
+  const [currentId, setCurrentId] = useState(defaultVideoId);
+  const [videos, setVideos] = useState([]);
+  const [videoDetails, setVideoDetails] = useState(defaultDetails);
+
+  useEffect(() => {
+    axios
+      .get(`${url}?api_key=${apiKey}`)
+      .then((response) => {
+        const data = response.data;
+        setVideos(filterVideo(data, currentId));
+      })
+      .catch((error) => error);
+  }, [currentId]);
+
+  useEffect(() => {
+    const fetchVideoDetails = async () => {
+      try {
+        axios.get(`${url}/${currentId}?api_key=${apiKey}`).then((response) => {
+          const data = response.data;
+          setVideoDetails(data);
+        });
+      } catch (error) {
+        console.log("Error", error);
+      }
+    };
+    fetchVideoDetails();
+
+  }, [currentId]);
+
 
   return (
     <div className="App">
       <Header />
-      <Video video={videoDetails} apiKey={apiKey} />
+      
+      {videoDetails.video? <Video video={videoDetails} apiKey={apiKey} /> : "Loading.."}
       <div className="bottomSection">
         <div className="bottomSection__main">
-          <Main video={videoDetails} />
+          {videoDetails.comments[0].id && <Main video={videoDetails} />}
         </div>
         <div className="bottomSection__videos">
-          <VideoList videoList={videos} onClick={clickHandler} />
+        {videos &&<VideoList videoList={videos} setId={setCurrentId} />}
         </div>
       </div>
     </div>

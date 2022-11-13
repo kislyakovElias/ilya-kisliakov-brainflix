@@ -1,0 +1,231 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  object-fit: contain;
+  padding: 1rem;
+  padding-top: 0;
+  &__header {
+    padding: 0rem 1rem;
+    padding-top: 1.5rem;
+    border-top: solid $mercury 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $light-black;
+  }
+  &__videobox {
+    color: $silver;
+    width: 100%;
+    padding: 0.25rem;
+    padding-left: 0;
+    height: 30%;
+    &__text {
+      margin-bottom: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    &__video {
+      height: 10rem;
+      width: 100%;
+      &-img {
+        border-radius: 0.25rem;
+        height: 100%;
+        width: 100%;
+        max-height: 14rem;
+        max-width: 24rem;
+        background: url("../../assets/images/Upload-video-preview.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding-top: 1rem;
+      width: 100%;
+      &__unit {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding-bottom: 0.5rem;
+        font-size: 0.5rem;
+        &-label {
+          font-size: 0.75rem;
+          color: $silver;
+          font-weight: 700;
+        }
+        &__text {
+          display: flex;
+          background-color: $alabaster;
+          border: 0.0325rem solid $mercury;
+          height: 6rem;
+          border-radius: 0.25rem;
+          margin-top: 0.2rem;
+          font-size: 0.85rem;
+          padding-left: 1rem;
+          padding-top: 0.5rem;
+          resize: none;
+          color: $dark-black;
+          font-family: Avenir;
+          opacity: 1;
+        }
+        &__title {
+          opacity: 1;
+          font-family: Avenir;
+          display: flex;
+          background-color: $alabaster;
+          border: 0.0325rem solid $mercury;
+          height: 2.5rem;
+          border-radius: 0.25rem;
+          margin-top: 0.2rem;
+          margin-bottom: 1rem;
+          color: $dark-black;
+          padding-left: 1rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      &__submit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 1rem;
+        &-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 2.25rem;
+          background-color: $main-blue;
+          color: $text-color;
+          border-radius: 0.3125rem;
+          border: none;
+          font-size: 0.75rem;
+          line-height: normal;
+          font-weight: 700;
+          max-width: 24rem;
+          text-decoration: none;
+
+          &:hover {
+            background-color: $dark-blue;
+          }
+        }
+        &-icon {
+          position: relative;
+          left: -95px;
+          transform: scale(0.9, 0.9);
+        }
+      }
+    }
+  }
+  &__cancel {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    &__button {
+      padding-left: 1.45rem;
+      color: $main-blue;
+      background-color: $text-color;
+      border: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  }
+}
+
+@include medium {
+  .upload {
+    margin: 2.25rem;
+    margin-top: 1.5rem;
+    border-top: solid $mercury 2px;
+    padding: 0;
+    &__header {
+      padding-left: 3rem;
+      padding-top: 2.5rem;
+      font-size: 2rem;
+      border-top: solid 2px $mercury;
+    }
+    &__form__box__submit {
+      flex-direction: row;
+      justify-content: flex-end;
+      border-top: solid 2px $mercury;
+      padding-top: 1.5rem;
+      margin: 0 2.25rem;
+      &-btn {
+        width: 10rem;
+        order: 2;
+      }
+      &-icon {
+        left: -35px;
+      }
+    }
+    &__cancel {
+      order: 1;
+      padding: 0 2rem;
+    }
+    &__videobox {
+      &__text {
+        padding-top: 1rem;
+      }
+      &__video {
+        width: 21.75rem;
+        height: 12rem;
+      }
+    }
+  }
+}
+
+@include large {
+  .upload {
+    display: flex;
+    flex-direction: row;
+    margin: 0 7.75rem;
+    &__header {
+      padding-left: 7.5rem;
+      margin-bottom: 1.5rem;
+    }
+    &__videobox {
+      width: 52.5%;
+      &__video {
+        width: 93%;
+      }
+      &__text {
+        margin-top: 0;
+        padding-top: 1.5rem;
+      }
+    }
+    &__form {
+      padding-bottom: 1.25rem;
+      &__box {
+        padding-top: 1.5rem;
+        &__submit {
+          margin: 0 7.75rem;
+        }
+        &__unit {
+          &-label {
+            margin-bottom: 0.25rem;
+          }
+          &__text {
+            height: 6.65rem;
+          }
+        }
+      }
+    }
+  }
+}
