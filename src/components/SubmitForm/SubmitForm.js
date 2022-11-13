@@ -22,7 +22,7 @@ function SubmitForm() {
               id="text"
               type="text"
               name="comment"
-              placeholder="Add a new comment.."
+              placeholder="Add a new comment"
               required
             ></textarea>
           </div>

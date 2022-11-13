@@ -8,9 +8,7 @@ function Header(props) {
     <div>
       <header className="header">
         <Link className="header__logo" to="/">
-          {/* <div className="header__logo"> */}
           <img className="header__logo-pic" alt="logo" src={logo} />
-          {/* </div> */}
         </Link>
 
         <div className="header__search">
@@ -21,14 +19,12 @@ function Header(props) {
         </div>
         <div className="header__upload">
           <Link className="header__upload__button" to="/upload">
-            <button className="header__upload__button">
               <img
                 className="header__upload__button-img"
                 alt="upload"
                 src={upload}
               />
               UPLOAD
-            </button>
           </Link>
           <div className="header__upload__avatar">
             <div className="header__upload__avatar__pic"></div>
