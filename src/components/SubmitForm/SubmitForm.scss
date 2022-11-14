@@ -53,10 +53,13 @@
           padding-top: 0.75rem;
           padding-left: 1rem;
           margin-top: 0.25rem;
-          color: $dark-black;
+          // color: $dark-black;
           font-size: 0.9rem;
           font-family: Avenir;
-          opacity: 1;
+          &::placeholder {
+            opacity: 1;
+            color: $light-black;
+          }
         }
       }
 

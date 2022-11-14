@@ -80,10 +80,12 @@
           resize: none;
           color: $dark-black;
           font-family: Avenir;
-          opacity: 1;
+          &::placeholder {
+            opacity: 1;
+            color: $light-black;
+          }
         }
         &__title {
-          opacity: 1;
           font-family: Avenir;
           display: flex;
           background-color: $alabaster;
@@ -95,6 +97,10 @@
           color: $dark-black;
           padding-left: 1rem;
           font-size: 0.85rem;
+          &::placeholder {
+            opacity: 1;
+            color: $light-black;
+          }
         }
       }
 
@@ -153,18 +159,18 @@
   .upload {
     margin: 2.25rem;
     margin-top: 1.5rem;
-    border-top: solid $mercury 2px;
+    border-top: solid $mercury 1px;
     padding: 0;
     &__header {
       padding-left: 3rem;
       padding-top: 2.5rem;
       font-size: 2rem;
-      border-top: solid 2px $mercury;
+      border-top: solid 1px $mercury;
     }
     &__form__box__submit {
       flex-direction: row;
       justify-content: flex-end;
-      border-top: solid 2px $mercury;
+      border-top: solid 1px $mercury;
       padding-top: 1.5rem;
       margin: 0 2.25rem;
       &-btn {

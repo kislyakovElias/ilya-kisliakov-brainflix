@@ -36,7 +36,6 @@
     width: 100%;
     margin-bottom: 1rem;
     &__bar {
-      opacity: 1;
       font-family: Avenir;
       color: $dark-black;
       padding-left: 38px;
@@ -46,6 +45,10 @@
       border-radius: 0.25rem;
       background-color: $alabaster;
       background: no-repeat url("../../assets/Icons/search.svg") 0.7375rem;
+      &::placeholder {
+        opacity: 1;
+        color: $light-black;
+      }
     }
     &__avatar {
       display: flex;
