@@ -31,15 +31,15 @@ function Upload() {
       <div>
         <Header />
       </div>
-      <div className="upload__header">Upload Video</div>
-        <form className="upload" onSubmit={videoPost}>
+      <div className="upload-header">Upload Video</div>
+      <form className="upload" onSubmit={videoPost}>
         <div className="upload__videobox">
           <p className="upload__videobox__text">VIDEO THUMBNAIL</p>
           <div className="upload__videobox__video">
             <div className="upload__videobox__video-img"></div>
           </div>
         </div>
-      <section>
+        <section>
           <div className="upload__form">
             <div className="upload__form__box">
               <div className="upload__form__box__unit">

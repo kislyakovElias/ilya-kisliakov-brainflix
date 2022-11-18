@@ -9,7 +9,7 @@
   object-fit: contain;
   padding: 1rem;
   padding-top: 0;
-  &__header {
+  &-header {
     padding: 0rem 1rem;
     padding-top: 1.5rem;
     border-top: solid $mercury 1px;
@@ -26,7 +26,7 @@
     &__text {
       margin-bottom: 0.25rem;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 600;
     }
     &__video {
       height: 10rem;
@@ -65,7 +65,7 @@
         &-label {
           font-size: 0.75rem;
           color: $silver;
-          font-weight: 700;
+          font-weight: 600;
         }
         &__text {
           display: flex;
@@ -121,7 +121,7 @@
           border: none;
           font-size: 0.75rem;
           line-height: normal;
-          font-weight: 700;
+          font-weight: 500;
           max-width: 24rem;
           text-decoration: none;
           padding: 0;
@@ -150,8 +150,8 @@
       color: $main-blue;
       background-color: $text-color;
       border: none;
-      font-size: 0.8rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-weight: 600;
     }
   }
 }
@@ -162,7 +162,7 @@
     margin-top: 1.5rem;
     border-top: solid $mercury 1px;
     padding: 0;
-    &__header {
+    &-header {
       padding-left: 3rem;
       padding-top: 2.5rem;
       font-size: 2rem;
@@ -205,7 +205,7 @@
     display: flex;
     // flex-direction: row;
     margin: 0 7.75rem;
-    &__header {
+    &-header {
       padding-left: 7.5rem;
       margin-bottom: 1.5rem;
     }
