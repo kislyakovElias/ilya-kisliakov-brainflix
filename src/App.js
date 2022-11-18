@@ -9,31 +9,31 @@ import axios from "axios";
 import VideoList from "./components/VideoList/VideoList";
 import { filterVideo } from "./utilities/ulils";
 
-const url = "https://project-2-api.herokuapp.com/videos";
+const url = "http://localhost:8080/videos";
 const apiKey = "dc0900dd-0f3b-4b59-a50b-938cbd326362";
 
 const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
 
 const defaultDetails = {
-  id: "",
-  title: "",
-  channel: "",
-  image: "",
-  description: "",
-  views: "",
-  likes: "",
-  duration: "",
-  video: "",
-  timestamp: 0,
-  comments: [
-    {
-      id: "",
-      name: "",
-      comment: "",
-      likes: 0,
-      timestamp: 0,
-    },
-  ],
+  // id: "",
+  // title: "",
+  // channel: "",
+  // image: "",
+  // description: "",
+  // views: "",
+  // likes: "",
+  // duration: "",
+  // video: "",
+  // timestamp: 0,
+  // comments: [
+  //   {
+  //     id: "",
+  //     name: "",
+  //     comment: "",
+  //     likes: 0,
+  //     timestamp: 0,
+  //   },
+  // ],
 };
 
 
@@ -44,7 +44,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`${url}?api_key=${apiKey}`)
+      .get(`${url}`)
       .then((response) => {
         const data = response.data;
         setVideos(filterVideo(data, currentId));
@@ -55,7 +55,7 @@ function App() {
   useEffect(() => {
     const fetchVideoDetails = async () => {
       try {
-        axios.get(`${url}/${currentId}?api_key=${apiKey}`).then((response) => {
+        await axios.get(`${url}/${currentId}`).then((response) => {
           const data = response.data;
           setVideoDetails(data);
         });
@@ -75,10 +75,10 @@ function App() {
       {videoDetails.video? <Video video={videoDetails} apiKey={apiKey} /> : "Loading.."}
       <div className="bottomSection">
         <div className="bottomSection__main">
-          {videoDetails.comments[0].id && <Main video={videoDetails} />}
+          {videoDetails? <Main video={videoDetails} /> : 'Nothing to display..'}
         </div>
         <div className="bottomSection__videos">
-        {videos &&<VideoList videoList={videos} setId={setCurrentId} />}
+        {videos &&<VideoList videoList={videos} setId={setCurrentId} url={url}/>}
         </div>
       </div>
     </div>

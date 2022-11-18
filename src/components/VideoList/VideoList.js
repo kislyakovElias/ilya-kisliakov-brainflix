@@ -9,9 +9,7 @@ function VideoList(props) {
   useEffect(() => {
     if (params.videoId) {
       axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${params.videoId}?api_key=dc0900dd-0f3b-4b59-a50b-938cbd326362`
-        )
+        .get(`${props.url}/${params.videoId}`)
         .then((res) => {
           props.setId(res.data.id);
         })
@@ -26,7 +24,11 @@ function VideoList(props) {
       <div className="videoList">
         <h6 className="videoList__header">NEXT VIDEOS</h6>
         {props.videoList.map((video) => (
-          <Link className="videoList__content-link" key={video.id} to={`/${video.id}`}>
+          <Link
+            className="videoList__content-link"
+            key={video.id}
+            to={`/${video.id}`}
+          >
             <div className="videoList__content">
               <div className="videoList__content__picture">
                 {

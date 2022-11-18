@@ -108,13 +108,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 1rem;
+        padding-top: 1rem;
         &-btn {
           display: flex;
           justify-content: center;
           align-items: center;
           width: 100%;
-          height: 2.25rem;
+          height: 2.5rem;
           background-color: $main-blue;
           color: $text-color;
           border-radius: 0.3125rem;
@@ -124,6 +124,7 @@
           font-weight: 700;
           max-width: 24rem;
           text-decoration: none;
+          padding: 0;
 
           &:hover {
             background-color: $dark-blue;
@@ -141,7 +142,7 @@
     display: flex;
     justify-content: center;
     padding: 1rem;
-    padding-top: 2.5rem;
+    // padding-top: 2.5rem;
     text-decoration: none;
     color: inherit;
     &__button {
@@ -167,18 +168,20 @@
       font-size: 2rem;
       border-top: solid 1px $mercury;
     }
-    &__form__box__submit {
-      flex-direction: row;
-      justify-content: flex-end;
-      border-top: solid 1px $mercury;
-      padding-top: 1.5rem;
-      margin: 0 2.25rem;
-      &-btn {
-        width: 10rem;
-        order: 2;
-      }
-      &-icon {
-        left: -35px;
+    &__form__box {
+      padding-bottom: 1rem;
+      &__submit {
+        flex-direction: row;
+        justify-content: flex-end;
+        border-top: solid 1px $mercury;
+        padding-top: 1.5rem;
+        &-btn {
+          width: 10rem;
+          order: 2;
+        }
+        &-icon {
+          left: -35px;
+        }
       }
     }
     &__cancel {
@@ -200,7 +203,7 @@
 @include large {
   .upload {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
     margin: 0 7.75rem;
     &__header {
       padding-left: 7.5rem;
@@ -221,7 +224,6 @@
       &__box {
         padding-top: 1.5rem;
         &__submit {
-          margin: 0 7.75rem;
         }
         &__unit {
           &-label {

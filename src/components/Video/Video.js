@@ -1,6 +1,7 @@
 import "./Video.scss";
 
 function Video({ video }) {
+  // console.log(video.image, "img");
   return (
     <div>
       <section className="hero">
