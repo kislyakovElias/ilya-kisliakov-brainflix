@@ -2,7 +2,6 @@ import "./Upload.scss";
 import Header from "../../components/Header/Header";
 import uploadIcon from "../../assets/Icons/publish.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import axios from "axios";
 
 function Upload() {
