@@ -5,8 +5,6 @@ import likeIcon from "../../assets/Icons/likes.svg";
 import viewsIcon from "../../assets/Icons/views.svg";
 
 function Main({ video }) {
-
-
   const { title, channel, description, views, likes, timestamp, comments } =
     video;
 
@@ -23,18 +21,29 @@ function Main({ video }) {
           </div>
           <div className="main__stats__part">
             <div className="main__stats__part-block">
-            <img className="main__stats__part-block-img" src={viewsIcon} alt="views"/>
-            <p className="main__stats__part__line">{views}</p>
+              <img
+                className="main__stats__part-block-img"
+                src={viewsIcon}
+                alt="views"
+              />
+              <p className="main__stats__part__line">{views}</p>
             </div>
             <div className="main__stats__part-block">
-            <img className="main__stats__part-block-img" src={likeIcon} alt="likes"/>
-            <p className="main__stats__part__line">{likes}</p>
+              <img
+                className="main__stats__part-block-img"
+                src={likeIcon}
+                alt="likes"
+              />
+              <p className="main__stats__part__line">{likes}</p>
             </div>
           </div>
         </div>
         <p className="main__description">{description}</p>
-        <div className="main__comments"> {comments.length} Comments</div>
-        <Comments commentsArr={comments} />
+        <div className="main__comments">
+          {" "}
+          {comments ? comments.length : ""} Comments
+        </div>
+        {comments ? <Comments commentsArr={comments} /> : "Nothing to display"}
       </div>
     </>
   );

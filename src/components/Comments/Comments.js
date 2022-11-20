@@ -30,6 +30,7 @@ function Comments({ commentsArr }) {
             </div>
           </div>
         ))}
+        
       </div>
     </>
   );

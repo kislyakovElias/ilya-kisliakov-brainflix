@@ -18,8 +18,8 @@
       &-pic {
         margin-top: 1rem;
         margin-right: 1rem;
-        height: 2.5rem;
-        width: 2.5rem;
+        min-height: 2.5rem;
+        min-width: 2.5rem;
         background: url("../../assets/images/Mohan-muruge.jpg");
         background-size: cover;
         background-position: unset;
@@ -40,7 +40,7 @@
         &-label {
           font-size: 0.75rem;
           color: $silver;
-          font-weight: 700;
+          font-weight: 600;
         }
         &__text {
           display: flex;
@@ -112,11 +112,6 @@
           justify-content: left;
           width: 70%;
           font-size: 0.7rem;
-          &-label {
-            font-size: 0.75rem;
-            color: $silver;
-            font-weight: 700;
-          }
           &__text {
             height: 2.5rem;
           }

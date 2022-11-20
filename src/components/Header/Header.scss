@@ -57,8 +57,8 @@
       height: 100%;
       &__pic {
         margin-left: 0.7rem;
-        height: 2.4rem;
-        width: 2.4rem;
+        min-height: 2.4rem;
+        min-width: 2.4rem;
         background: url("../../assets/images/Mohan-muruge.jpg");
         background-size: cover;
         border-radius: 50%;
@@ -74,7 +74,7 @@
       align-items: center;
       border: none;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 600;
       height: 100%;
       width: 100%;
       background-color: #0095ff;
