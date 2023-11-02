@@ -17,7 +17,7 @@ function Base() {
   return (
     <>
       <Header />
-      <h1>Page doesn't exist</h1>
+      <h1>Page doesn't exist1</h1>
     </>
   );
 }
